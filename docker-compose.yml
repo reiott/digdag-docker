@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  digdag:
+    container_name: digdag
+    build: .
+    volumes:
+      - /tmp:/tmp
+    ports:
+      - "0.0.0.0:9000:9000"
+    tty: true
+
+networks:
+  digdag_networks:
